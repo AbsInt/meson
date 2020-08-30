@@ -180,8 +180,8 @@ def ensure_stdout_accepts_unicode():
                 sys.stdout.buffer = sys.stdout.raw if hasattr(sys.stdout, 'raw') else sys.stdout
 
 def run(original_args, mainfile):
-    if sys.version_info < (3, 5):
-        print('Meson works correctly only with python 3.5+.')
+    if sys.version_info < (3, 6):
+        print('Meson works correctly only with python 3.6+.')
         print('You have python {}.'.format(sys.version))
         print('Please update your environment')
         return 1
